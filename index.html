@@ -3,22 +3,89 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Wispr</title>
+        <title>Wispr!</title>
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
         />
+        <script defer src="./main.js" type="module"></script>
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        ></script>
     </head>
     <body>
-        <div id="app"></div>
-        <section class="section">
-            <div class="container">
-                <h1 class="title">Hello World</h1>
-                <p class="subtitle">
-                    My first website with <strong>Bulma</strong>!
-                </p>
+        <div class="container p-3">
+            <nav
+                class="navbar mb-5"
+                role="navigation"
+                aria-label="main navigation"
+            >
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://bulma.io">
+                        <img
+                            src="https://bulma.io/images/bulma-logo.png"
+                            width="112"
+                            height="28"
+                        />
+                    </a>
+                </div>
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item"> Home </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="columns">
+                <div class="column is-3">
+                    <nav class="panel is-primary">
+                        <p class="panel-heading">Settings</p>
+                        <div class="panel-block">
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                    <input
+                                        class="input"
+                                        type="text"
+                                        placeholder="Password"
+                                    />
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="panel-block">
+                            <div class="field">
+                                <div class="control is-expanded">
+                                    <label class="label">Burn After</label>
+                                    <div class="select is-fullwidth">
+                                        <select>
+                                            <option value="5m">
+                                                5 Minutes
+                                            </option>
+                                            <option value="1h">1 Hour</option>
+                                            <option value="1d">1 Day</option>
+                                            <option value="1w">1 Week</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-block">
+                            <button class="button is-fullwidth is-link">
+                                Generate
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="column">
+                    <textarea
+                        class="textarea"
+                        placeholder="Enter your secret here ..."
+                        rows="10"
+                    ></textarea>
+                </div>
             </div>
-        </section>
-        <script src="./main.js"></script>
+        </div>
     </body>
 </html>

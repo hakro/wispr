@@ -7,7 +7,7 @@
         "dev": "vite --host --port 7000",
         "build": "vite build",
         "preview": "vite preview",
-		"prettier": "prettier --write **/*.js **/*.css **/*.html"
+        "prettier": "prettier --write **/*.js **/*.json **/*.html"
     },
     "devDependencies": {
         "prettier": "2.7.1",
