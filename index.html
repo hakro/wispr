@@ -8,11 +8,11 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
         />
-        <script defer src="./main.js" type="module"></script>
         <script
             defer
             src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
         ></script>
+        <script defer src="./main.js" type="module"></script>
     </head>
     <body>
         <div class="container p-3">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item"> Home </a>
+                        <a class="navbar-item">Home</a>
                     </div>
                 </div>
             </nav>
@@ -42,6 +42,7 @@
                         <p class="panel-heading">Settings</p>
                         <div class="panel-block">
                             <div class="field">
+                                <label class="label">Password</label>
                                 <p class="control has-icons-left">
                                     <input
                                         class="input"
@@ -55,24 +56,23 @@
                             </div>
                         </div>
                         <div class="panel-block">
-                            <div class="field">
-                                <div class="control is-expanded">
-                                    <label class="label">Burn After</label>
-                                    <div class="select is-fullwidth">
-                                        <select>
-                                            <option value="5m">
-                                                5 Minutes
-                                            </option>
-                                            <option value="1h">1 Hour</option>
-                                            <option value="1d">1 Day</option>
-                                            <option value="1w">1 Week</option>
-                                        </select>
-                                    </div>
+                            <div class="control">
+                                <label class="label">Burn After</label>
+                                <div class="select is-fullwidth">
+                                    <select>
+                                        <option value="5m">5 Minutes</option>
+                                        <option value="1h">1 Hour</option>
+                                        <option value="1d">1 Day</option>
+                                        <option value="1w">1 Week</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="panel-block">
-                            <button class="button is-fullwidth is-link">
+                            <button
+                                id="btn-generate-link"
+                                class="button is-fullwidth is-link"
+                            >
                                 Generate
                             </button>
                         </div>
@@ -82,7 +82,7 @@
                     <textarea
                         class="textarea"
                         placeholder="Enter your secret here ..."
-                        rows="10"
+                        rows="18"
                     ></textarea>
                 </div>
             </div>
