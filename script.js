@@ -34,18 +34,26 @@ function getInput() {
 
 function inputIsValid() {
     if (inputPassphrase.value == "") {
-        passphraseHelp.innerHTML = "Passphrase required"
+        passphraseHelp.classList.remove("is-hidden")
         inputPassphrase.classList.add("is-danger")
         return false
+    } else {
+        passphraseHelp.classList.add("is-hidden")
+        inputPassphrase.classList.remove("is-danger")
     }
     if (textSecret.value == "") {
-        secretHelp.innerHTML = "You need to enter a secret"
+        secretHelp.classList.remove("is-hidden")
         textSecret.classList.add("is-danger")
         return false
+    } else {
+        secretHelp.classList.add("is-hidden")
+        textSecret.classList.remove("is-danger")
     }
 
     inputPassphrase.classList.remove("is-danger")
     textSecret.classList.remove("is-danger")
+    passphraseHelp.classList.add("is-hidden")
+    secretHelp.classList.add("is-hidden")
 
     return true
 }

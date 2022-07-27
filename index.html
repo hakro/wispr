@@ -17,7 +17,7 @@
     <body>
         <div class="container p-3">
             <nav
-                class="navbar mb-5"
+                class="navbar mb-6"
                 role="navigation"
                 aria-label="main navigation"
             >
@@ -31,7 +31,7 @@
                     </a>
                 </div>
                 <div class="navbar-menu">
-                    <div class="navbar-start">
+                    <div class="navbar-start ml-6">
                         <a class="navbar-item">Home</a>
                     </div>
                 </div>
@@ -66,9 +66,11 @@
                                     </div>
                                 </div>
                                 <p
-                                    class="help is-danger"
+                                    class="help is-danger is-hidden"
                                     id="passphrase-help"
-                                ></p>
+                                >
+                                    Passphrase required
+                                </p>
                             </div>
                         </div>
                         <div class="panel-block">
@@ -102,7 +104,9 @@
                             rows="18"
                             id="text-secret"
                         ></textarea>
-                        <p class="help is-danger" id="secret-help"></p>
+                        <p class="help is-danger is-hidden" id="secret-help">
+                            You need to enter a secret
+                        </p>
                     </div>
                 </div>
             </div>
