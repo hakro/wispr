@@ -8,6 +8,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
         />
+        <link rel="stylesheet" href="style.css" />
         <script
             defer
             src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
@@ -15,7 +16,7 @@
         <script defer src="./script.js" type="module"></script>
     </head>
     <body>
-        <div class="container p-3">
+        <div class="container mb-6 p-3">
             <nav
                 class="navbar mb-6"
                 role="navigation"
@@ -37,6 +38,19 @@
                 </div>
             </nav>
             <div class="columns">
+                <div class="column">
+                    <div class="field">
+                        <textarea
+                            class="textarea"
+                            placeholder="Enter the secret you want to share here ..."
+                            rows="18"
+                            id="text-secret"
+                        ></textarea>
+                        <p class="help is-danger is-hidden" id="secret-help">
+                            You need to enter a secret
+                        </p>
+                    </div>
+                </div>
                 <div class="column is-3">
                     <!-- Settings Panel -->
                     <nav class="panel is-primary">
@@ -69,7 +83,7 @@
                                     class="help is-danger is-hidden"
                                     id="passphrase-help"
                                 >
-                                    Passphrase required
+                                    Passphrase is required
                                 </p>
                             </div>
                         </div>
@@ -96,20 +110,19 @@
                         </div>
                     </nav>
                 </div>
-                <div class="column">
-                    <div class="field">
-                        <textarea
-                            class="textarea"
-                            placeholder="Enter the secret you want to share here ..."
-                            rows="18"
-                            id="text-secret"
-                        ></textarea>
-                        <p class="help is-danger is-hidden" id="secret-help">
-                            You need to enter a secret
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Wispr</strong> made with ❤️ by
+                    <a href="https://github.com/hakro/wispr">Hakro</a>. The
+                    source code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php"
+                        >MIT</a
+                    >
+                </p>
+            </div>
+        </footer>
     </body>
 </html>
