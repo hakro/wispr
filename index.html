@@ -12,7 +12,7 @@
             defer
             src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
         ></script>
-        <script defer src="./main.js" type="module"></script>
+        <script defer src="./script.js" type="module"></script>
     </head>
     <body>
         <div class="container p-3">
@@ -38,28 +38,40 @@
             </nav>
             <div class="columns">
                 <div class="column is-3">
+                    <!-- Settings Panel -->
                     <nav class="panel is-primary">
-                        <p class="panel-heading">Settings</p>
+                        <div class="panel-heading">Settings</div>
                         <div class="panel-block">
                             <div class="field">
-                                <label class="label">Password</label>
-                                <p class="control has-icons-left">
-                                    <input
-                                        class="input"
-                                        type="text"
-                                        placeholder="Password"
-                                    />
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </p>
+                                <label class="label">Passphrase *</label>
+                                <div class="field has-addons">
+                                    <div class="control has-icons-left">
+                                        <input
+                                            class="input"
+                                            type="text"
+                                            placeholder="Passphrase - required"
+                                            id="input-passphrase"
+                                        />
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </div>
+                                    <div class="control">
+                                        <a
+                                            class="button is-info"
+                                            id="btn-random"
+                                        >
+                                            Random
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="panel-block">
                             <div class="control">
-                                <label class="label">Burn After</label>
+                                <label class="label">Burn After *</label>
                                 <div class="select is-fullwidth">
-                                    <select>
+                                    <select id="select-burnafter">
                                         <option value="5m">5 Minutes</option>
                                         <option value="1h">1 Hour</option>
                                         <option value="1d">1 Day</option>
@@ -71,9 +83,9 @@
                         <div class="panel-block">
                             <button
                                 id="btn-generate-link"
-                                class="button is-fullwidth is-link"
+                                class="button is-fullwidth is-danger"
                             >
-                                Generate
+                                Generate link
                             </button>
                         </div>
                     </nav>
@@ -83,6 +95,7 @@
                         class="textarea"
                         placeholder="Enter your secret here ..."
                         rows="18"
+                        id="text-secret"
                     ></textarea>
                 </div>
             </div>
