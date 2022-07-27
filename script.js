@@ -1,8 +1,10 @@
 const btnRandom = document.querySelector("#btn-random")
 const btnGenerateLink = document.querySelector("#btn-generate-link")
 const inputPassphrase = document.querySelector("#input-passphrase")
+const passphraseHelp = document.querySelector("#passphrase-help")
 const selectBurnafter = document.querySelector("#select-burnafter")
 const textSecret = document.querySelector("#text-secret")
+const secretHelp = document.querySelector("#secret-help")
 
 btnGenerateLink.addEventListener("click", () => {
     if (!inputIsValid()) {
@@ -31,9 +33,19 @@ function getInput() {
 }
 
 function inputIsValid() {
-    if (inputPassphrase.value == "" || textSecret.value == "") {
-        alert("all fields required")
+    if (inputPassphrase.value == "") {
+        passphraseHelp.innerHTML = "Passphrase required"
+        inputPassphrase.classList.add("is-danger")
         return false
     }
+    if (textSecret.value == "") {
+        secretHelp.innerHTML = "You need to enter a secret"
+        textSecret.classList.add("is-danger")
+        return false
+    }
+
+    inputPassphrase.classList.remove("is-danger")
+    textSecret.classList.remove("is-danger")
+
     return true
 }
