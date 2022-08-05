@@ -4,3 +4,10 @@
     bottom: 0;
     width: 100%;
 }
+
+.notification#flash {
+    position: absolute !important;
+    right: 2em;
+    top: 2em;
+    z-index: 100 !important;
+}

@@ -5,6 +5,10 @@ const passphraseHelp = document.querySelector("#passphrase-help")
 const selectBurnafter = document.querySelector("#select-burnafter")
 const textSecret = document.querySelector("#text-secret")
 const secretHelp = document.querySelector("#secret-help")
+const notification = document.querySelector(".notification#flash")
+const btnsDeleteNotification = document.querySelectorAll(
+    ".notification .delete"
+)
 
 btnGenerateLink.addEventListener("click", (e) => {
     e.preventDefault()
@@ -18,11 +22,21 @@ btnGenerateLink.addEventListener("click", (e) => {
         })
         .catch((error) => {
             console.log("unable to reach the server: " + error)
+            notify(
+                "is-danger",
+                "There has been an issue connecting to the server"
+            )
         })
 })
 
 btnRandom.addEventListener("click", () => {
     inputPassphrase.value = (Math.random() + 1).toString(36).substring(2)
+})
+
+btnsDeleteNotification.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        notification.classList.add("is-hidden")
+    })
 })
 
 function getInput() {
@@ -57,4 +71,15 @@ function inputIsValid() {
     secretHelp.classList.add("is-hidden")
 
     return true
+}
+
+function notify(notifClass, message) {
+    // notifClass corresponds to usual Bulma color classes : is-danger, is-primary...
+    notification.classList.add(notifClass)
+    notification.classList.remove("is-hidden")
+    notification.querySelector("p").innerHTML = message
+    // Hide after a couple of seconds
+    window.setTimeout(() => {
+        notification.classList.add("is-hidden")
+    }, 5000)
 }

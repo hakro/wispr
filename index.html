@@ -9,13 +9,17 @@
             href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
         />
         <link rel="stylesheet" href="style.css" />
-        <script
-            defer
-            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        />
         <script defer src="./script.js" type="module"></script>
     </head>
     <body>
+        <div class="notification is-hidden" id="flash">
+            <button class="delete"></button>
+            <p></p>
+        </div>
         <div class="container mb-6 p-2">
             <nav
                 class="navbar mb-6 pt-3"
@@ -124,7 +128,7 @@
                     </a>
                     made with ❤️ by
                     <a href="https://github.com/hakro" target="_blank">Hakro</a>
-                    -
+                    <br />
                     <a
                         href="http://opensource.org/licenses/mit-license.php"
                         target="_blank"
