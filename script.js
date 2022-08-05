@@ -11,7 +11,7 @@ btnGenerateLink.addEventListener("click", (e) => {
     if (!inputIsValid()) {
         return
     }
-    fetch("http://localhost:7000/api/secret")
+    fetch("/api/secret")
         .then((response) => response.json())
         .then((result) => {
             console.log(result)
