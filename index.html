@@ -55,59 +55,63 @@
                     <!-- Settings Panel -->
                     <nav class="panel is-primary">
                         <div class="panel-heading">Settings</div>
-                        <div class="panel-block">
-                            <div class="field">
-                                <label class="label">Passphrase *</label>
-                                <div class="field has-addons">
-                                    <div class="control has-icons-left">
-                                        <input
-                                            class="input"
-                                            type="text"
-                                            placeholder="Passphrase"
-                                            id="input-passphrase"
-                                        />
-                                        <span class="icon is-small is-left">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
+                        <form>
+                            <div class="panel-block">
+                                <div class="field">
+                                    <label class="label">Passphrase *</label>
+                                    <div class="field has-addons">
+                                        <div class="control has-icons-left">
+                                            <input
+                                                class="input"
+                                                type="text"
+                                                placeholder="Passphrase"
+                                                id="input-passphrase"
+                                            />
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                        </div>
+                                        <div class="control">
+                                            <a
+                                                class="button is-info"
+                                                id="btn-random"
+                                            >
+                                                Random
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="control">
-                                        <a
-                                            class="button is-info"
-                                            id="btn-random"
-                                        >
-                                            Random
-                                        </a>
+                                    <p
+                                        class="help is-danger is-hidden"
+                                        id="passphrase-help"
+                                    >
+                                        Passphrase is required
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="panel-block">
+                                <div class="control">
+                                    <label class="label">Burn After *</label>
+                                    <div class="select is-fullwidth">
+                                        <select id="select-burnafter">
+                                            <option value="5m">
+                                                5 Minutes
+                                            </option>
+                                            <option value="1h">1 Hour</option>
+                                            <option value="1d">1 Day</option>
+                                            <option value="1w">1 Week</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <p
-                                    class="help is-danger is-hidden"
-                                    id="passphrase-help"
+                            </div>
+                            <div class="panel-block">
+                                <button
+                                    id="btn-generate-link"
+                                    class="button is-fullwidth is-danger"
                                 >
-                                    Passphrase is required
-                                </p>
+                                    Generate link
+                                </button>
                             </div>
-                        </div>
-                        <div class="panel-block">
-                            <div class="control">
-                                <label class="label">Burn After *</label>
-                                <div class="select is-fullwidth">
-                                    <select id="select-burnafter">
-                                        <option value="5m">5 Minutes</option>
-                                        <option value="1h">1 Hour</option>
-                                        <option value="1d">1 Day</option>
-                                        <option value="1w">1 Week</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel-block">
-                            <button
-                                id="btn-generate-link"
-                                class="button is-fullwidth is-danger"
-                            >
-                                Generate link
-                            </button>
-                        </div>
+                        </form>
                     </nav>
                 </div>
             </div>
@@ -115,17 +119,18 @@
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>
-                    <a href="https://github.com/hakro/wispr" target="_blank"
-                        ><strong>Wispr</strong></a
-                    >
+                    <a href="https://github.com/hakro/wispr" target="_blank">
+                        <strong>Wispr</strong>
+                    </a>
                     made with ❤️ by
-                    <a href="https://github.com/hakro" target="_blank">Hakro</a
-                    >.
+                    <a href="https://github.com/hakro" target="_blank">Hakro</a>
+                    -
                     <a
                         href="http://opensource.org/licenses/mit-license.php"
                         target="_blank"
-                        >MIT</a
                     >
+                        MIT
+                    </a>
                     licensed
                 </p>
             </div>

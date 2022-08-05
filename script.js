@@ -6,7 +6,8 @@ const selectBurnafter = document.querySelector("#select-burnafter")
 const textSecret = document.querySelector("#text-secret")
 const secretHelp = document.querySelector("#secret-help")
 
-btnGenerateLink.addEventListener("click", () => {
+btnGenerateLink.addEventListener("click", (e) => {
+    e.preventDefault()
     if (!inputIsValid()) {
         return
     }
@@ -16,7 +17,7 @@ btnGenerateLink.addEventListener("click", () => {
             console.log(result)
         })
         .catch((error) => {
-            console.log(error)
+            console.log("unable to reach the server: " + error)
         })
 })
 
